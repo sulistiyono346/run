@@ -1,0 +1,136 @@
+body{
+    font-family: Tahoma;
+    color: #444;
+    letter-spacing: 1px;
+    /* border:2px solid DodgerBluehanya sebagai pembatas desain */
+}
+
+h1, h2{
+    font-weight: normal;
+}
+
+#wrapper{
+    /* width: device-width; */
+    /* max-width: 1080px; */
+    margin:auto;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 0 0 20px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    /* border:1px solid Tomato hanya sebagai pembatas desain */
+}
+
+#page-header{
+    background: #2e7297;
+    padding: 5px 0;
+   
+    /* border:1px solid Tomato hanya sebagai pembatas desain */
+
+}
+
+#page-header h1{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #67bdeb;
+}
+#page-header p{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: #67bdeb;
+
+}
+#page-header input{
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+}
+#wedding-list, #add-wedding{
+    margin: 30px;
+}
+#wedding-list ul{
+    list-style-type: none; /* menghilangkan dot ul */
+    padding: 0;
+}
+#wedding-list li{
+    padding: 12px;
+    border-left: 5px solid #ddd;
+    margin: 20px 10px;
+}
+#wedding-list li:hover{
+    border-color: #2e7297; /*digunakan ketika mouse mengenai li akan berwarna biru*/
+}
+.delete{
+    float: right;
+    background: #2e7297;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+}
+.delete:hover{
+    background: #333;
+}
+#add-wedding{
+    float: left;
+    width: 400px;
+    margin: 0 auto;
+    margin: 20px 30px;
+   
+}
+#add-wedding input{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 240px;
+    float: left;
+    clear: both;
+}
+#add-wedding button{
+    border: 1px solid #2e7297;
+    background: #2e7297;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    margin: 20px 0;
+    border-left: 0;
+    color: white;
+}
+
+
+#page-footer{
+    border-top:5px solid #056090;
+    font-size: 10px;
+    display: inline-block;
+    width: 100%;
+    background: #105479;
+    height:90px;
+    border-bottom:5px solid #032d44;
+
+}
+#page-footer p{
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
