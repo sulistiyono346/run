@@ -1,28 +1,33 @@
 
+var list = document.querySelector('#wedding-list ul');
+var forms = document.forms;
 
+/*delete weddings with Arrow 
+list.addEventListener('click', (delete) => {
+    if(e.target.className === 'delete') {
+    var li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+}
+// });*/
 
-
-
-const list = document.querySelector('#wedding-list ul');
-const forms = document.forms;
-
-// delete weddings
-list.addEventListener('click', (e) => {
-    if (e.target.className == 'delete') {
-        const li = e.target.parentElement;
+list.addEventListener('click', function (del) {
+    if (del.target.className === 'delete') {
+        var li = del.target.parentElement;
         li.parentNode.removeChild(li);
     }
 });
 
-const addForm = forms['add-wedding'];
-addForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+
+
+var addForm = forms['add-wedding'];
+addForm.addEventListener('submit', function (add) {
+    add.preventDefault();
 
     // create elements
-    const value = addForm.querySelector('input[type="text"]').value;
-    const li = document.createElement('li');
-    const weddingName = document.createElement('span');
-    const deleteBtn = document.createElement('span');
+    var value = addForm.querySelector('input[type="text"]').value;
+    var li = document.createElement('li');
+    var weddingName = document.createElement('span');
+    var deleteBtn = document.createElement('span');
 
     // add text content
     weddingName.textContent = value;
@@ -38,13 +43,12 @@ addForm.addEventListener('submit', function (e) {
     list.appendChild(li);
 });
 
-const searchBar = forms['search-data'].querySelector('input');
-searchBar.addEventListener('keyup', (e) => {
-    const term = e.target.value.toLowerCase();
-    const weddings = list.getElementsByTagName('li');
-    Array.from(weddings).forEach((wedding) => {
-        const title = wedding.firstElementChild.textContent;
-        if (title.toLowerCase().indexOf(e.target.value) != -1) {
+var searchBar = forms['search-data'].querySelector('input');
+searchBar.addEventListener('keyup', function (find) {
+    var weddings = list.getElementsByTagName('li');
+    Array.from(weddings).forEach(function (wedding) {
+        var title = wedding.firstElementChild.textContent;
+        if (title.toLowerCase().indexOf(find.target.value) != -1) {
             wedding.style.display = 'block';
         } else {
             wedding.style.display = 'none';
