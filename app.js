@@ -95,7 +95,7 @@ function astSign() {
             img.src = zodiac[i].picture
             return
         } else {
-            sign.innerHTML = "oops! That's not a sign. Try again"
+            sign.innerHTML = "oops! Input kembali"
             range.innerHTML = " "
             attributes.innerHTML = " "
             img.src = "http://courtneysgamecoderocks.com/ZodiacProject/img/wrong.png"
